@@ -4,11 +4,11 @@ def add(num1, num2):
 def subtract(num1, num2):
   return num1 - num2
 
-def multiplnum2(num1, num2):
+def multiply(num1, num2):
   return num1 * num2
 
 def divide(num1, num2):
-  return float(num1 / num2)
+  return float(num1) / float(num2)
 
 def square(num1):
   return num1 * num1
