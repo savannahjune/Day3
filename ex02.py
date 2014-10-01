@@ -1,23 +1,21 @@
-print "I will now count my chickens:"
+# this one is like your scripts with argv
+def print_two(*args):
+    arg1, arg2, arg3 = args
+    print "arg1: %r, arg2: %r, arg3: %r" % (arg1, arg2, arg3)
 
-print "Hens", 25 + 30 / 6
-print "Roosters", 100 - 25 * 3 % 4
+# ok, that *args is actually pointless, we can just do this
+def print_two_again(arg1, arg2):
+    print "arg1: %r, arg2: %r" % (arg1, arg2)
 
-print "Now I will count the eggs:"
+# this just takes one argument
+def print_one(arg1):
+    print "arg1: %r" % arg1
 
-print 3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6 
+# this one takes no arguments
+def print_none():
+    print "I got nothin'."
 
-print "Is it true that 3 + 2 < 5 - 7"
-
-print 3 + 2 < 5 - 7
-
-print "What is 3 + 2?", 3 + 2
-print "What is 5 - 7", 5 - 7
-
-print "Oh, that's why it's False."
-
-print "How about some more."
-
-print "Is it greater?", 5 > -2
-print "Is it greater or equal?", 5 >= -2
-print "Is it less or equal?", 5 <=-2
+print_two("Zed", "Shaw", "Stinks")
+print_two_again("Zed", "Shaw")
+print_one("First!")
+print_none()
