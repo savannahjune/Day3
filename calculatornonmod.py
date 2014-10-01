@@ -22,10 +22,10 @@ def power(num1, num2):
 def mod(num1, num2):
     return num1 % num2
 
-def calculator(opersign, num1, num2):
-    if opersign == '+':
-        print add(num1, num2)
-    elif opersign == '-':
+def calculator(opersign, num1, num2): # defines function calculator with three args
+    if opersign == '+':  # if opersign is plus, calls add function on num1 and num2
+        print add(num1, num2) # prints result of add function
+    elif opersign == '-': # if opersign is subtract, calls subtract function on num1 and num2
         print subtract(num1, num2)
     elif opersign == '*':
         print multiply(num1, num2)
@@ -44,31 +44,14 @@ def calculator(opersign, num1, num2):
         print "Bye!"
 
 # ask user for input
-entry = []
-#entry = raw_input()
-
-#entrylist = entry.split(" ")
 oper = ''
 x = 0
-y = 0 
+y = 0
 
-
-
-
-#print entrylist
-#print oper
-#print type(x)
 while oper != 'q':
-    entry = raw_input()
-    entrylist = entry.split(" ")
-    oper = entrylist[0]
-    x = int(entrylist[1])
-    y = int(entrylist[2])
-    print calculator(oper, x, y)
-    if oper == 'q':
-        x = 0
-        y = 0
-        break
-
-
-
+    entry = raw_input()  # ask user for input
+    entrylist = entry.split(" ") # takes that input and makes it a list
+    oper = entrylist[0] # defines oper as first item in list
+    x = int(entrylist[1]) # defines x as second item in list and makes it an integer
+    y = int(entrylist[2]) # defines y as third item in list and makes it an integer
+    print calculator(oper, x, y) # calls function with oper, x, and y as arguments
