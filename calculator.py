@@ -1,13 +1,27 @@
-def add(num1, num2):
-    return num1 + num2
+def add(nums):
+    print nums
+    total = 0
+    for i in nums:
+        total = total + int(i)
 
-def subtract(num1, num2):
-    return num1 - num2
+    return total
 
-def multiply(num1, num2):
-    return num1 * num2
+def subtract(nums):
+    print nums
+    total = int(nums[0])
+    for i in nums[1:]:
+        total = total - int(i)
+    return total
 
-def divide(num1, num2):
+def multiply(nums):
+    print nums
+    total = int(nums[0])
+    for i in nums[1:]:
+        total = total * int(i)
+    return total
+
+def divide(*nums):
+    num1, num2 = nums
     return float(num1) / float(num2)
 
 def square(num1):
@@ -22,23 +36,24 @@ def power(num1, num2):
 def mod(num1, num2):
     return num1 % num2
 
-def calculator(opersign, num1, num2):
+def calculator(opersign, nums):
+
     if opersign == '+':
-        return add(num1, num2)
+        return add(nums)
     elif opersign == '-':
-        return subtract(num1, num2)
+        return subtract(nums)
     elif opersign == '*':
-        return multiply(num1, num2)
+        return multiply(nums)
     elif opersign == '/':
-        return divide(num1, num2)  
+        return divide(nums)  
     elif opersign == 'square':
-        return square(num1)
+        return square(nums)
     elif opersign == 'cube':
-        return cube(num1)
+        return cube(nums)
     elif opersign == 'pow':
-        return power(num1, num2)
+        return power(nums)
     elif opersign == 'mod':
-        return mod(num1, num2) 
+        return mod(nums) 
     else:    
         return "That's not an operator."
 
@@ -53,9 +68,7 @@ while True:
         print "Bye!"
         break
     else:
-
         entrylist = entrylist.split(" ")
         oper = entrylist[0]
-        x = int(entrylist[1])
-        y = int(entrylist[2])
-        print calculator(oper, x, y)
+
+        print calculator(oper, entrylist[1:])
