@@ -27,8 +27,8 @@ def calculator(opersign, num1, num2): # defines function calculator with three a
         print add(num1, num2) # prints result of add function
     elif opersign == '-': # if opersign is subtract, calls subtract function on num1 and num2
         print subtract(num1, num2)
-    elif opersign == '*':
-        print multiply(num1, num2)
+    elif opersign == '*': # if opersign is multiply, calls multiply functino on num1 and num2
+        print multiply(num1, num2) # prints result of multiply
     elif opersign == '/':
         print divide(num1, num2)  
     elif opersign == 'square':

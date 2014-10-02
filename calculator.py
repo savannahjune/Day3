@@ -58,17 +58,13 @@ y = 0
 #print entrylist
 #print oper
 #print type(x)
-while oper != 'q':
-    entry = raw_input()
-    entrylist = entry.split(" ")
-    oper = entrylist[0]
-    x = int(entrylist[1])
-    y = int(entrylist[2])
-    print calculator(oper, x, y)
+while True:
     if oper == 'q':
-        x = 0
-        y = 0
         break
-
-
-
+    else:
+        entry = raw_input()
+        entrylist = entry.split(" ")
+        oper = entrylist[0]
+        x = int(entrylist[1])
+        y = int(entrylist[2])
+        print calculator(oper, x, y)
