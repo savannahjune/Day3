@@ -24,46 +24,37 @@ def mod(num1, num2):
 
 def calculator(opersign, num1, num2):
     if opersign == '+':
-        print add(num1, num2)
+        return add(num1, num2)
     elif opersign == '-':
-        print subtract(num1, num2)
+        return subtract(num1, num2)
     elif opersign == '*':
-        print multiply(num1, num2)
+        return multiply(num1, num2)
     elif opersign == '/':
-        print divide(num1, num2)  
+        return divide(num1, num2)  
     elif opersign == 'square':
-        print square(num1)
+        return square(num1)
     elif opersign == 'cube':
-        print cube(num1)
+        return cube(num1)
     elif opersign == 'pow':
-        print power(num1, num2)
+        return power(num1, num2)
     elif opersign == 'mod':
-        print mod(num1, num2) 
-    else:
-        opersign = 'q'    
-        print "Bye!"
+        return mod(num1, num2) 
+    else:    
+        return "That's not an operator."
 
-# ask user for input
-entry = []
-#entry = raw_input()
-
-#entrylist = entry.split(" ")
 oper = ''
 x = 0
 y = 0 
 
-
-
-
-#print entrylist
-#print oper
-#print type(x)
 while True:
-    if oper == 'q':
+    entrylist = raw_input()
+
+    if entrylist[0] == 'q':
+        print "Bye!"
         break
     else:
-        entry = raw_input()
-        entrylist = entry.split(" ")
+
+        entrylist = entrylist.split(" ")
         oper = entrylist[0]
         x = int(entrylist[1])
         y = int(entrylist[2])
